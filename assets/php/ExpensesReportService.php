@@ -66,7 +66,6 @@
                     'month'=>(int)$Month,
                     'year'=>(int)$Year,
                 ];
-                        
                 $data=$HttpConnector->GetDataByUrl($Url,$body,1);
                 //$Result=$this->HtmlElements($data['data']);
                 if($data['isSuccess'])return $this->HtmlElements($data['data']);
@@ -95,7 +94,7 @@
                     </div>
                     <div class="element-part element-footer">
                         <div class="plan-value">'. number_format( $item['target'], 0, ',', ' ').'</div>
-                        <div class="expense_item">'. $item['expenditure'].'</div>
+                        <div class="expense_item expenses-element">'. $item['expenditure'].'</div>
                     </div>
                 </div>';
             }  

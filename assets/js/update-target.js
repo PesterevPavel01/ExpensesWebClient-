@@ -1,4 +1,4 @@
-let ExpensesElements=document.querySelectorAll('.element');
+/*let ExpensesElements=document.querySelectorAll('.element');
 let updateFormBtnSuccess=document.querySelector('.timeValue_btn-success');
 let currentElement;
 console.log("Выполняется скрипт update-target");
@@ -13,4 +13,4 @@ console.log("Выполняется скрипт update-target");
     
         document.getElementById("updateFormContainer").classList.add("open");
         
-    }
+    }*/

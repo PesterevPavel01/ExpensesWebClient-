@@ -1,0 +1,23 @@
+body{
+    background-color: #222;
+}
+
+.main-container{
+    max-height:100%;
+    max-width: 100%;
+}
+
+.title{
+    color: #C7C7C7;
+    font-family: 'Roboto', serif;
+    font-size: 18px;
+    margin: 0 10px;
+}
+
+.element-container{
+    margin: auto 5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap:5px;
+}

@@ -17,10 +17,10 @@
         wp_enqueue_style( 'swiper-bundle-css',"https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css");
         wp_enqueue_script( 'swiper-bundle',"https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js");
 
-        wp_enqueue_script( 'my-jquery',get_template_directory_uri(  ).'/assets/js/my-jquery.js',false,null,true);
+        wp_enqueue_script( 'loadExpensesOrder',get_template_directory_uri(  ).'/assets/js/loadExpensesOrder.js',false,null,true);
         wp_enqueue_script( 'swiper',get_template_directory_uri(  ).'/assets/js/swiper.js',false,null,true);
         wp_enqueue_script( 'swiper-month',get_template_directory_uri(  ).'/assets/js/swiper-month.js',false,null,true);
-        wp_enqueue_script( 'update-target',get_template_directory_uri(  ).'/assets/js/update-target.js',false,null,true);
+        //wp_enqueue_script( 'update-target',get_template_directory_uri(  ).'/assets/js/update-target.js',false,null,true);
 
     };
 ?>

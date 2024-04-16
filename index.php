@@ -12,37 +12,6 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <?php wp_head();?>
         
-        <script>
-            function IsSuccess(data)
-            {
-                $result=(JSON.parse(data));
-                $("#element-container").html($result['html']);
-                $("#user").html($result['user']);
-            }
-
-            $(document).ready(function(){
-
-                $("#btn-login").bind('click',function(){ 
-
-                    let body=
-                    {
-                        login:$("#login").val(),
-                        password: $("#password").val(),
-                        month:4,
-                        year:2024
-                    };
-
-                    $.ajax({
-                        url:"<?=get_template_directory_uri(  ) ."/assets/php/AsyncService.php"?>",
-                        type:"POST",
-                        data:(body),
-                        dataType:"html",
-                        success:IsSuccess
-                    })
-                });
-            });
-        </script>
-
     </head>
     
     <body>
@@ -163,7 +132,7 @@
 
                 ?>
                 
-                        <div class="element element_color">
+                        <div class="element element_color" >
 
                             <div class="element-part element-body">
                                 <div class="icon icon_colorize  <?= $Color?>">
@@ -176,7 +145,7 @@
                             <div class="element-part element-footer">
 
                                 <div class="plan-value"><?= number_format( $item['target'], 0, ',', ' '); ?></div>
-                                <div class="expense_item"><?= $item['expenditure']; ?></div>
+                                <div class="expense_item expenses-element"><?= $item['expenditure']; ?></div>
 
                             </div>
 
@@ -190,23 +159,5 @@
                 ?>
 
             </div>  
-
-
-
-
-        <div class="updateFormContainer" id="updateFormContainer">
-
-            <form class="updateForm" action="./assets/php/uploadValue.php" method="post">
-                <?php
-                echo "<input type='hidden' class='manager' name='manager' id='manager' value='error' readonly>"
-                ?>
-                <?php
-                echo "<input type='hidden' class='update_argument' name='update_argument' id='update_argument' value='error' readonly>"
-                ?>
-                <input type="number" step="any" class="updateForm_value formControl" name="updateForm_value" id="time" placeholder="Отработано часов" pattern="\d+(,\d{2})?">
-                <button class="timeValue_btn-success  formControl">Изменить</button>
-            </form>
-            
-        </div>
 
     <?php get_footer( ); ?>
