@@ -1,0 +1,241 @@
+/*
+Theme Name: Expenses
+Theme URI: https://wordpress.org/themes/twentytwentyfour/
+Author: Analitic
+Author URI: https://wordpress.org
+Description: Тема для создания клиента для сервиса "Затраты"
+Version: 1.0
+*/
+
+body{
+    width: 100%;
+}
+footer{
+    height: 100px;
+}
+.title{
+    margin-top: 80px;
+    color:#C7C7C7 ;
+    font-family:'Roboto', serif;
+    font-size: 18px;
+    margin:20px 10px;
+}
+
+.element-container{
+    margin: auto 5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap:5px;
+
+}
+
+.element{
+    width: 100%;
+    height: 100px;
+    border-radius: 10px;
+    gap: 2px;
+}
+
+.element_color{
+    background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.swiper{
+    width: 100% !important;
+}
+
+.swiper-wrapper{
+    box-sizing: content-box;
+}
+
+.container_user{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.element-white{
+    margin: 5px;
+    height: 140px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.element-white_color{
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.btn-success{
+    height: 40px;
+    width: 40px;
+    margin: auto;
+    background-image: url(assets/img/updateSelectIcon.png);
+    background-size: 100% 100%;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+}
+
+/*main{
+    padding-top: 70px;
+}*/
+
+.element-form{
+    width: 100%;
+    margin: 8px !important;
+    display: flex;
+    flex-direction: column;
+    gap:4px;
+}
+
+.form-control
+{
+    height: 40px;
+    border-radius: 3px;
+    padding-left: 10px;
+    border: none;
+    margin: 2px 0;
+}
+
+input, select, textarea{
+    color: #c9c3c3;
+}
+
+.element-form-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.element-form-title{
+    width: 100%;
+    margin: 3px 0;
+    color:rgba(255, 255, 255);
+    font-family: "Rubik", sans-serif;
+    font-size: 22px;
+}
+.swiper-button-prev::after {
+    font-size: 20px !important;
+    text-align: left !important;
+}
+.swiper-button-prev{
+    top: 98px !important;
+}
+.swiper-button-next{
+    top: 98px !important;
+}
+.swiper-button-next::after {
+    font-size: 20px !important;
+    text-align: right !important;
+}
+
+.swiper-conteiner{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.month{
+    width: 100%;
+    margin: 3px 0;
+    color:rgba(255, 255, 255,0);
+    font-family: "Rubik", sans-serif;
+    font-size: 22px;
+    text-align: center;
+}
+
+.month.swiper-slide-active{
+    color:rgba(255, 255, 255,1) !important;
+}
+
+.user-icon-blue
+{
+    height: 50px;
+    width: 50px;
+    background-image: url(assets/img/User_icon-blue.svg);
+    background-size: 100% 100%;
+}
+
+.calendar-icon-form{
+    height: 50px;
+    width: 50px;
+    background-image: url(assets/img/calendar_icon.svg);
+    background-size: 100% 100%;
+}
+
+.element-part{
+    width: 95%;
+    height: 50%;
+    margin: auto;
+    display: flex;
+}
+
+.icon{
+    display: flex;
+    width: 34px;
+    height: 34px;
+    margin-top: 10px;
+
+}
+
+.icon_colorize{
+    border-radius: 20px;
+}
+
+.ok{
+    Color: #28833A;
+    border:3px solid #28833A;
+}
+
+.none{
+    Color: #D70423;
+    border:3px solid #D70423;
+}
+
+.icon-content{
+    font-size: 30px;
+    font-family: 'Roboto', serif;
+    margin: auto;
+    border:none;
+}
+.value-fact{
+    font-size: 30px;
+    font-family: 'Roboto', serif;
+    margin:auto;
+    margin-bottom: 5px;
+    border:none;
+}
+
+.element-footer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2px;
+}
+.plan-value{
+    font-family: 'Roboto', serif;
+    font-size: 15px;
+    Color: #FFFFFF;
+    margin:0 auto;
+}
+.expense_item{
+    font-family: 'Roboto', serif;
+    font-size: 11px;
+    Color: #d9d9d9;
+    margin:auto;
+    text-align: center;
+}
+
+.start_conteiner{
+    margin-left: 0;
+}
+
+.end_conteiner{
+    margin-right: 0;
+}
+
+.wrapper{
+    min-height: 100%;
+}
