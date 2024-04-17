@@ -13,12 +13,49 @@ body{
 footer{
     height: 100px;
 }
+
+.title-container{
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
 .title{
     margin-top: 80px;
     color:#C7C7C7 ;
     font-family:'Roboto', serif;
     font-size: 18px;
-    margin:20px 10px;
+    margin:auto 10px;
+}
+
+.close-button{
+    max-width:30px;
+    max-height:30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+.enable{
+    opacity: 1;
+}
+.disable{
+    opacity: 0;
+}
+.bar{
+    width: 30px;
+    height: 1px;
+    margin: auto;
+    background-color: rgb(248, 247, 247);
+    transition: 0.2s;
+}
+.bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+}
+.bar:nth-child(2){
+    transform: translateY(-8px) rotate(-45deg);
 }
 
 .element-container{
@@ -225,6 +262,7 @@ input, select, textarea{
     Color: #d9d9d9;
     margin:auto;
     text-align: center;
+    cursor: pointer;
 }
 
 .start_conteiner{

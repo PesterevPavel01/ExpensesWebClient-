@@ -117,8 +117,14 @@
                 </div>
             </div>
 
-            <div class="title"><?=CFS()->get('main_title')?></div>
+            <div class="title-container">
+                <div class="title"><?=CFS()->get('main_title')?></div>
 
+                <div class="close-button" class="close-button">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
 
             <div class="element-container" id="element-container">
            
