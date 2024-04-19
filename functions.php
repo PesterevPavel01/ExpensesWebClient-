@@ -10,6 +10,7 @@
         wp_enqueue_script( 'jquery');
 
         wp_enqueue_style( 'reset',get_template_directory_uri(  ).'/assets/css/reset.css');
+        wp_enqueue_style( 'footer_style',get_template_directory_uri(  ).'/assets/css/footer-style.css');
         wp_enqueue_style( 'header_style',get_template_directory_uri(  ).'/assets/css/header_style.css');
         wp_enqueue_style( 'update-target_style',get_template_directory_uri(  ).'/assets/css/update-target_style.css');
         wp_enqueue_style( 'main',get_stylesheet_uri(  ));
@@ -20,7 +21,7 @@
         wp_enqueue_script( 'loadExpensesOrder',get_template_directory_uri(  ).'/assets/js/loadExpensesOrder.js',false,null,true);
         wp_enqueue_script( 'swiper',get_template_directory_uri(  ).'/assets/js/swiper.js',false,null,true);
         wp_enqueue_script( 'swiper-month',get_template_directory_uri(  ).'/assets/js/swiper-month.js',false,null,true);
-        //wp_enqueue_script( 'update-target',get_template_directory_uri(  ).'/assets/js/update-target.js',false,null,true);
+        wp_enqueue_script( 'redactor-target',get_template_directory_uri(  ).'/assets/js/redactorTarget.js',false,null,true);
 
     };
 ?>

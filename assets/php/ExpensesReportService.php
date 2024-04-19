@@ -37,7 +37,7 @@
             return null;
         }
 
-        public function GetReportAsync($login,$password)
+        public function GetReportAsync($login,$password,$pencilUrl)
         {
             $now = time();
 
@@ -68,14 +68,14 @@
                 ];
                 $data=$HttpConnector->GetDataByUrl($Url,$body,1);
                 //$Result=$this->HtmlElements($data['data']);
-                if($data['isSuccess'])return $this->HtmlElements($data['data']);
+                if($data['isSuccess'])return $this->HtmlElements($data['data'],$pencilUrl);
 
             }
 
             return null;
         }
 
-        public function HtmlElements($items)
+        public function HtmlElements($items,$pencilUrl)
         {
             $UserName="";
             foreach($items as $item){
@@ -90,7 +90,9 @@
                             <div class="icon-content '. $Color.'">' . substr($item['expenditure'],0,2) .'</div>
                         </div>
                         <div class="value-fact '. $Color.'">'. number_format( $item['value'], 0, ',', ' ').'</div>
-                        <div class="icon"></div>
+                        <div class="icon pencil-container">
+                            <img src="'. $pencilUrl .'" alt="Редактировать" class="pencil"></img>
+                        </div>
                     </div>
                     <div class="element-part element-footer">
                         <div class="plan-value">'. number_format( $item['target'], 0, ',', ' ').'</div>

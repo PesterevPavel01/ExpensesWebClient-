@@ -145,7 +145,9 @@
                                     <div class="icon-content  <?= $Color?>"><?= substr($item['expenditure'],0,2); ?></div>
                                 </div>
                                 <div class="value-fact <?= $Color?>"><?= number_format( $item['value'], 0, ',', ' '); ?></div>
-                                <div class="icon"></div>
+                                <div class="icon pencil-container">
+                                    <img src=<?=get_template_directory_uri(  ) . '/assets/img/Edit.svg'?> alt="Редактировать" class="pencil"></img>
+                                </div>
                             </div>
 
                             <div class="element-part element-footer">
@@ -165,5 +167,5 @@
                 ?>
 
             </div>  
-
+            </main>
     <?php get_footer( ); ?>

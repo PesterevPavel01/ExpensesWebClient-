@@ -38,6 +38,6 @@
             $data=json_decode($curl_result,true);
           
             return $data;   
-        }        
+        }    
     }
 ?>

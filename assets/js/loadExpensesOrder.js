@@ -1,45 +1,4 @@
-/*console.log("Выполняется мой скрипт");
-const btn=document.querySelector('.btn-login');
-const elementsContainer= document.querySelector('.element-container');
-
-function sendRequest(method,url,body=null)
-{
-    return new Promise((resolve,reject)=>{
-        const request=new XMLHttpRequest();
-        request.open(method,url);
-        request.responseType='json';
-        request.setRequestHeader('Content-Type','application/json');
-
-        request.onload=()=>{
-            reject(request.response);
-        }
-
-        request.send(JSON.stringify(body));
-    })
-}
-
-const body={
-    login:'JuravlevaG',
-    password: 'Jur12GU',
-    month:4,
-    year:2024
-}
-console.log(JSON.stringify(body));
-sendRequest('POST','http://expensesApi:80/api/Report/Expenditures',body)
-
-
-
-$(document).ready(
-    function(){
-        $(document).ready(function(){
-            $("form").on('submit',function(event){
-              event.preventDefault();  
-              $.post(,$(this).serialize());
-            });
-        });
-    }
-)*/
-           
+       
 function IsSuccess(data)
 {
     $result=(JSON.parse(data));
@@ -48,16 +7,22 @@ function IsSuccess(data)
     $("#user").html($result['user']);
     $(".title").html("Бюджет");
     expensesClick();
+
+    $.ajax({
+        url:"./wp-content/themes/expenses/assets/js/redactor-OpenButtonEvent.js",
+        dataType:"script",
+    })
 }
 
 function DocumentIsSucsess(data)
 {
     $result=(JSON.parse(data));
-    console.log($result);
-    console.log('статья затрат: '+$result['expenditure']);
-    $(".title").html($result['expenditure']);
-    $("#element-container").html($result['html']);
-    closeButtonEnable();
+    if($result['html']!=null)
+    {
+        $(".title").html($result['expenditure']);
+        $("#element-container").html($result['html']);
+        closeButtonEnable();
+    }
 }
 
 function expensesClick(){
@@ -65,6 +30,7 @@ function expensesClick(){
     let $elements=$('.expenses-element');
 
     $elements.each(function(){
+        
         $( this ).bind('click',function(el){
             
             let body=
@@ -87,13 +53,15 @@ function expensesClick(){
 }
 
 function LoadReport($Login,$Password){
+    
     let body=
     {
         login:$Login,
         password: $Password,
         month:4,
         year:2024,
-        service:"ExpencesReport"
+        service:"ExpencesReport",
+        pencilUrl:"./wp-content/themes/expenses/assets/img/Edit.svg"
     };
 
     $.ajax({
@@ -127,7 +95,6 @@ function closeButtonEnable(){
 
 function closeClick(){
     LoadReport(getCookieValue("login"),getCookieValue("password"));
-    console.log();
     closeButtonDisable();
 }
 
